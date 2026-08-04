@@ -3,27 +3,27 @@ import { site } from "@/data/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line">
+    <footer className="border-t border-line bg-paper-2/60">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="font-display text-lg font-semibold">Ebaad Akram</p>
-          <p className="mt-1 max-w-sm text-sm text-muted">
-            Software engineering student & product-minded designer. Ontario, Canada.
+          <p className="mt-1 max-w-sm text-sm text-ink-soft">
+            Software engineering student learning interface design in public. Ontario, Canada.
           </p>
           <p className="mt-4 text-xs uppercase tracking-[0.18em] text-muted">
-            Designed and coded by me — this site is part of the portfolio.
+            Designed and coded by me — this site is part of the evidence.
           </p>
         </div>
         <nav aria-label="Footer">
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <li>
-              <a className="text-paper-dim transition-colors hover:text-gold" href={`mailto:${site.email}`}>
+              <a className="text-ink-soft transition-colors hover:text-accent-deep" href={`mailto:${site.email}`}>
                 Email
               </a>
             </li>
             <li>
               <a
-                className="text-paper-dim transition-colors hover:text-gold"
+                className="text-ink-soft transition-colors hover:text-accent-deep"
                 href={site.linkedin}
                 target="_blank"
                 rel="noreferrer"
@@ -33,7 +33,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                className="text-paper-dim transition-colors hover:text-gold"
+                className="text-ink-soft transition-colors hover:text-accent-deep"
                 href={site.github}
                 target="_blank"
                 rel="noreferrer"
@@ -43,7 +43,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                className="text-paper-dim transition-colors hover:text-gold"
+                className="text-ink-soft transition-colors hover:text-accent-deep"
                 href={site.devPortfolio}
                 target="_blank"
                 rel="noreferrer"
@@ -52,7 +52,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <Link className="text-paper-dim transition-colors hover:text-gold" href="/resume">
+              <Link className="text-ink-soft transition-colors hover:text-accent-deep" href="/resume">
                 Resume
               </Link>
             </li>

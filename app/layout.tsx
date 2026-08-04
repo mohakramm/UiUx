@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Work_Sans, Caveat } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { site } from "@/data/site";
 
-const inter = Inter({
-  variable: "--font-inter",
+const workSans = Work_Sans({
+  variable: "--font-work-sans",
   subsets: ["latin"],
   display: "swap",
 });
@@ -18,18 +18,25 @@ const fraunces = Fraunces({
   axes: ["opsz"],
 });
 
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["500"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Ebaad Akram — UI/UX & Product Design",
+    default: "Ebaad Akram — Product & Interface Design",
     template: "%s · Ebaad Akram",
   },
   description:
-    "Software engineering student and product-minded designer. I design interfaces that make complicated systems feel human — case studies in privacy-first social discovery, workflow design, and consumer product concepts.",
+    "Software engineering student and analyst learning interface design in public. Field notes on design in the wild, small interface studies, and an honest account of the route so far.",
   openGraph: {
-    title: "Ebaad Akram — UI/UX & Product Design",
+    title: "Ebaad Akram — Product & Interface Design",
     description:
-      "Software engineering student and product-minded designer. Case studies at the intersection of systems, stories, and people.",
+      "Systems by training, people by curiosity. Field notes, interface studies, and the route from engineering to design.",
     url: site.url,
     siteName: "Ebaad Akram",
     locale: "en_CA",
@@ -37,21 +44,21 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ebaad Akram — UI/UX & Product Design",
-    description: "I design interfaces that make complicated systems feel human.",
+    title: "Ebaad Akram — Product & Interface Design",
+    description: "I make complicated systems make sense.",
   },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable} h-full antialiased`}>
+    <html lang="en" className={`${workSans.variable} ${fraunces.variable} ${caveat.variable} h-full antialiased`}>
       <body className="grain min-h-full flex flex-col">
         <noscript>
           <style>{`.reveal{opacity:1 !important;transform:none !important}`}</style>
         </noscript>
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-gold focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-accent focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-paper"
         >
           Skip to content
         </a>

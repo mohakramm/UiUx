@@ -6,18 +6,27 @@ import { ButtonLink, Eyebrow, SectionHeading, Tag } from "@/components/ui";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Ebaad Akram — software engineering student at Western University and product-minded designer. Systems by training, stories by choice.",
+    "Ebaad Akram — software engineering student at Western University working at the overlap of analysis, engineering, and interface design.",
 };
+
+const analysisSkills = [
+  "Requirements & workflow mapping",
+  "Data cleaning & segmentation",
+  "User behavior analysis",
+  "Python & Excel for analysis",
+  "SQL",
+  "Stakeholder communication",
+  "Documentation people can read",
+];
 
 const designSkills = [
   "User flows & journey mapping",
   "Wireframing & prototyping",
   "Interaction design",
   "Information architecture",
-  "Usability & user acceptance testing",
   "UX writing",
+  "Usability & user acceptance testing",
   "Accessibility (WCAG-minded)",
-  "Design-to-dev handoff",
 ];
 
 const engineeringSkills = [
@@ -26,13 +35,11 @@ const engineeringSkills = [
   "Python",
   "Java",
   "Node.js & REST APIs",
-  "SQL & Supabase",
   "AWS",
-  "Flutter",
   "Git & agile teams",
 ];
 
-const coursework = ["UX Design", "Software Design Interfaces", "Database Management", "Web Technologies", "Data Structures & Algorithms"];
+const coursework = ["UX Design", "Software Design Interfaces", "Database Management", "Web Technologies", "Applied Probability & Statistics"];
 
 export default function AboutPage() {
   return (
@@ -45,100 +52,89 @@ export default function AboutPage() {
             <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
               Systems by training, stories by choice.
             </h1>
-            <div className="prose-measure mt-6 space-y-4 text-base leading-relaxed text-paper-dim">
+            <div className="prose-measure mt-6 space-y-4 text-base leading-relaxed text-ink-soft">
               <p>
-                I&apos;m Ebaad — a software engineering student at Western University who keeps ending up in the
-                design half of every project, and finally stopped pretending that&apos;s an accident.
+                I&apos;m Ebaad — a software engineering student at Western University, and I&apos;ll tell you the
+                honest version of how I got here, because it&apos;s more interesting than the polished one.
               </p>
               <p>
-                I&apos;ve always been drawn to how people behave: the decisions they make, the awkward moments they
-                avoid, the tiny interactions that change everything. That&apos;s probably why I love sitcoms,
-                romcoms, and product design in roughly equal measure — they&apos;re all about timing, context, and
-                understanding people. A well-placed confirmation dialog and a well-placed cutaway joke are the
-                same skill: knowing exactly when your audience needs a beat.
+                I didn&apos;t grow up sketching app screens. I got into software because I like understanding
+                systems — how they work, where they break, what they cost. That took me through kernels and
+                REST APIs at school, then into internships where the work was analytical: cleaning ten
+                thousand rows of user data, mapping how people actually moved through a product, figuring
+                out which assumptions the data politely disagreed with.
               </p>
               <p>
-                The engineering background isn&apos;t a past life I&apos;m escaping; it&apos;s the thing that makes my
-                design work practical. I&apos;ve built kernel schedulers, REST APIs, embedded systems, and
-                production React features, so when I design a screen I can also tell you what it costs, where
-                it will break, and what the API underneath should look like. I design with implementation, edge
-                cases, and constraints in mind — and I can sit on either side of the handoff meeting.
+                Design entered sideways. At my software internship, the feature I&apos;m proudest of wasn&apos;t
+                impressive engineering — it was a version history panel whose entire job was emotional:
+                making people brave enough to edit their own resumes. Watching support tickets drop taught
+                me something no lecture had: the interface <em>is</em> the product, and the analyst&apos;s
+                question — <em>why do people do that?</em> — is also the designer&apos;s question.
               </p>
               <p>
-                What I&apos;m looking for: UI/UX and product design internships and early roles — especially
-                products where trust, clarity, and a bit of storytelling matter. I care about the moments where
-                product design becomes human behavior: the first tap, the hesitation before a request, the
-                relief of an undo.
+                So that&apos;s what I am right now, honestly labelled: an engineer-analyst with real product
+                instincts, UX coursework, one shipped feature I can talk about for an hour, and a growing,
+                deliberate design practice — this site included. Not a decade of craft. A direction, chosen
+                on purpose, with evidence.
+              </p>
+              <p>
+                The other thing you should know: I love sitcoms, romcoms, and television generally, and I
+                genuinely believe they&apos;re design education. Timing, context, knowing your audience,
+                knowing when a beat needs to land and when to cut away — that&apos;s interface work with
+                better lighting.
               </p>
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <figure className="overflow-hidden rounded-2xl border border-line">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/ebaad.jpg"
-                alt="Portrait of Ebaad Akram"
-                width={600}
-                height={450}
-                className="w-full object-cover"
-              />
+            <figure className="relative">
+              <div className="overflow-hidden rounded-2xl border border-line bg-card p-2">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={site.photoPath}
+                  alt="Portrait of Ebaad Akram"
+                  width={600}
+                  height={450}
+                  className="w-full rounded-xl object-cover"
+                />
+              </div>
+              <figcaption className="font-hand mt-3 text-center text-xl text-ink-soft">
+                somewhere between the spreadsheet and the screen
+              </figcaption>
             </figure>
-            <div className="mt-6 rounded-2xl border border-line bg-ink-2 p-6 text-sm leading-relaxed text-paper-dim">
-              <p className="eyebrow text-gold">Off duty</p>
+            <div className="mt-6 rounded-2xl border border-line bg-card p-6 text-sm leading-relaxed text-ink-soft">
+              <p className="eyebrow text-accent-deep">Off duty</p>
               <p className="mt-3">
                 Comfort rewatches, ensemble sitcoms with great timing, romcoms where the leads are competent
-                adults, and the occasional anime arc that goes harder than it needs to. Strong opinions about
-                bottle episodes, held loosely.
+                adults, and the occasional anime arc that goes harder than it needs to. Strong opinions
+                about bottle episodes, held loosely.
               </p>
             </div>
           </Reveal>
         </div>
 
-        {/* Experience snapshot */}
-        <section className="mt-20" aria-labelledby="exp-title">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Previously on"
-              title="Experience, briefly"
-              intro="The full version is on the resume — this is the shape of it."
-              id="exp-title"
-            />
-          </Reveal>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            {[
-              {
-                org: "Resume Inc. — Software Engineering Intern",
-                when: "Summer 2024 · Toronto",
-                what: "Built interactive UI for a resume builder in React; designed and shipped the version history feature that cut related support tickets by 40%.",
-              },
-              {
-                org: "MNN Nexus — Data Analyst Intern",
-                when: "Summer 2025 · Mississauga",
-                what: "Turned 10,000+ rows of messy user data into behavioral segments used for targeted outreach — my crash course in what users actually do versus what we assume.",
-              },
-              {
-                org: "Western Engineering Bots — Software Subteam Lead",
-                when: "2024 – present · London, ON",
-                what: "Lead an 8-person software team building a humanoid robot for national competition — equal parts systems integration and keeping humans aligned.",
-              },
-            ].map((e, i) => (
-              <Reveal key={e.org} delay={i * 80} className="rounded-2xl border border-line bg-ink-2 p-6">
-                <h3 className="font-display text-lg font-semibold">{e.org}</h3>
-                <p className="mt-1 text-xs uppercase tracking-wider text-muted">{e.when}</p>
-                <p className="mt-3 text-sm leading-relaxed text-paper-dim">{e.what}</p>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
         {/* Skills */}
         <section className="mt-20" aria-labelledby="skills-title">
           <Reveal>
-            <SectionHeading eyebrow="The toolkit" title="Skills & tools" id="skills-title" />
+            <SectionHeading
+              eyebrow="The toolkit"
+              title="Three overlapping skill sets"
+              intro="The overlap is the point — I can sit in the requirements meeting, the design review, and the sprint planning without changing costumes."
+              id="skills-title"
+            />
           </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <Reveal className="rounded-2xl border border-line bg-ink-2 p-6">
-              <h3 className="font-display text-lg font-semibold text-gold">Design</h3>
+            <Reveal className="rounded-2xl border border-line bg-card p-6">
+              <h3 className="font-display text-lg font-semibold text-accent-deep">Analysis</h3>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {analysisSkills.map((s) => (
+                  <li key={s}>
+                    <Tag>{s}</Tag>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+            <Reveal delay={80} className="rounded-2xl border border-line bg-card p-6">
+              <h3 className="font-display text-lg font-semibold text-accent-deep">Design</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {designSkills.map((s) => (
                   <li key={s}>
@@ -147,8 +143,8 @@ export default function AboutPage() {
                 ))}
               </ul>
             </Reveal>
-            <Reveal delay={80} className="rounded-2xl border border-line bg-ink-2 p-6">
-              <h3 className="font-display text-lg font-semibold text-gold">Engineering</h3>
+            <Reveal delay={160} className="rounded-2xl border border-line bg-card p-6">
+              <h3 className="font-display text-lg font-semibold text-accent-deep">Engineering</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {engineeringSkills.map((s) => (
                   <li key={s}>
@@ -156,31 +152,22 @@ export default function AboutPage() {
                   </li>
                 ))}
               </ul>
-            </Reveal>
-            <Reveal delay={160} className="rounded-2xl border border-line bg-ink-2 p-6">
-              <h3 className="font-display text-lg font-semibold text-gold">Relevant coursework</h3>
-              <ul className="mt-4 flex flex-wrap gap-2">
-                {coursework.map((s) => (
-                  <li key={s}>
-                    <Tag>{s}</Tag>
-                  </li>
-                ))}
-              </ul>
               <p className="mt-4 text-xs leading-relaxed text-muted">
-                B.E.Sc. Software Engineering, Western University — expected 2027.
+                Relevant coursework: {coursework.join(" · ")} — B.E.Sc. Software Engineering, Western
+                University, expected 2027.
               </p>
             </Reveal>
           </div>
         </section>
 
         {/* CTA */}
-        <Reveal className="mt-20 rounded-2xl border border-line bg-ink-2 p-8 text-center sm:p-12">
+        <Reveal className="mt-20 rounded-2xl border border-line bg-card p-8 text-center sm:p-12">
           <h2 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
             The rest is better in conversation.
           </h2>
-          <p className="mx-auto mt-3 max-w-md text-sm text-paper-dim">
-            Happy to walk through any case study in detail — the decisions, the trade-offs, and the parts I&apos;d
-            do differently.
+          <p className="mx-auto mt-3 max-w-md text-sm text-ink-soft">
+            Happy to walk through anything here — the field notes, the interface studies, or the honest
+            version of any line on the resume.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-4">
             <ButtonLink href={`mailto:${site.email}`} external>

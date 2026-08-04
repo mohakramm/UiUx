@@ -1,6 +1,8 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Ebaad Akram — UI/UX & Product Design";
+export const dynamic = "force-static";
+
+export const alt = "Ebaad Akram — Product & Interface Design";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -15,8 +17,8 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "#0b0d12",
-          color: "#ede8de",
+          background: "#faf5ea",
+          color: "#362c38",
           fontFamily: "Georgia, serif",
         }}
       >
@@ -26,32 +28,32 @@ export default function OpenGraphImage() {
             fontSize: 26,
             letterSpacing: 6,
             textTransform: "uppercase",
-            color: "#d6ab63",
+            color: "#bd4527",
           }}
         >
-          Ebaad Akram · UI/UX & Product Design
+          Ebaad Akram · Product & Interface Design
         </div>
         <div
           style={{
             display: "flex",
             marginTop: 36,
-            fontSize: 68,
+            fontSize: 72,
             lineHeight: 1.15,
             maxWidth: 980,
             fontWeight: 600,
           }}
         >
-          I design interfaces that make complicated systems feel human.
+          I make complicated systems make sense.
         </div>
         <div
           style={{
             display: "flex",
             marginTop: 40,
             fontSize: 28,
-            color: "#948f83",
+            color: "#857a6e",
           }}
         >
-          Software Engineering · Product Thinking · Interface Design
+          Software Engineering · Analysis · Interface Design
         </div>
       </div>
     ),

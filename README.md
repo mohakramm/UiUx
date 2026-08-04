@@ -1,29 +1,31 @@
-# Ebaad Akram — UI/UX Portfolio
+# Ebaad Akram — Product & Interface Design Portfolio
 
-A UI/UX and product design portfolio for Ebaad Akram: software engineering student at
-Western University, designing at the intersection of systems, stories, and people.
+A personal portfolio for Ebaad Akram: software engineering student at Western University
+working at the overlap of analysis, engineering, and interface design.
 
-**Positioning:** cinematic product storyteller with engineering depth. Case studies are
-framed as episodes — setup, conflict, constraints, decisions, resolution — and every
-project is honestly labelled as shipped, user-tested, or concept.
+**Positioning (honest by design):** not a lifelong-designer origin story — an
+engineer-analyst who arrived at design deliberately, with evidence. Instead of padded
+case studies, the site shows sensibility: **Field Notes** (short observations about
+design in the wild), **interface studies** designed in code, stated principles, and the
+site itself as a work sample.
 
-## Case studies
+**Visual language:** warm editorial — cream paper, deep plum ink, one vermilion accent,
+serif-led type (Fraunces + Work Sans) with handwritten margin notes. Travel-journal
+undertones: the personal history is an itinerary, changes of plan are delivered calmly.
 
-| Episode | Project | Status |
-| --- | --- | --- |
-| EP. 01 | Venn — proximity social discovery | Self-initiated concept (in progress) |
-| EP. 02 | Western Exam Schedule Tool | Real project + user acceptance testing |
-| EP. 03 | Version History at Resume Inc. | Shipped internship work (support tickets −40%) |
-| EP. 04 | Marquee — a better movie night | Concept case study |
+## Pages
+
+- `/` — hero, the route so far, interface studies, field-note teasers, principles, experience
+- `/notes` — five full field notes
+- `/about` — the honest origin story + three skill sets
+- `/resume`, `/contact`
 
 ## Stack
 
-- [Next.js](https://nextjs.org) (App Router) + TypeScript
-- Tailwind CSS v4
-- No animation libraries — scroll reveals are a ~40-line IntersectionObserver component
-  with `prefers-reduced-motion` and no-JS fallbacks
-- All case-study mockups and thumbnails are built in code (JSX/SVG), no image exports
-- Fully static output; deployable to Vercel as-is
+- Next.js (App Router) + TypeScript, Tailwind CSS v4
+- Static export (`output: "export"`), no animation libraries, no image exports —
+  all visuals are JSX/SVG in code
+- Reduced-motion and no-JS fallbacks; accessible navigation
 
 ## Develop
 
@@ -32,19 +34,17 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:3000.
+## Deploy — GitHub Pages
 
-## Build & checks
+Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the static export
+with `NEXT_PUBLIC_BASE_PATH=/UiUx` and publishes it to GitHub Pages at
+**https://mohakramm.github.io/UiUx/**.
 
-```bash
-npm run lint
-npm run build
-```
+One-time setup: repo **Settings → Pages → Source: GitHub Actions**.
 
 ## Editing content
 
-- Case study card metadata: `data/caseStudies.ts`
-- Site-wide identity/links: `data/site.ts` (set `NEXT_PUBLIC_SITE_URL` or edit `url` after deploying)
-- Case study pages: `app/work/<slug>/page.tsx`
-- Resume PDF: `public/resume.pdf`
-- Design tokens (colors, type, grain, motion): `app/globals.css`
+- Field notes: `data/notes.ts`
+- Interface studies: `components/Explorations.tsx`
+- Identity/links: `data/site.ts` · Resume PDF: `public/resume.pdf`
+- Design tokens: `app/globals.css`

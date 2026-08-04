@@ -4,7 +4,7 @@ import { ButtonLink, Eyebrow } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Ebaad Akram about UI/UX, product design, and product-adjacent roles.",
+  description: "Get in touch with Ebaad Akram about product, analysis, and interface design roles.",
 };
 
 const channels = [
@@ -38,13 +38,14 @@ export default function ContactPage() {
   return (
     <div className="spotlight pt-32 pb-24 sm:pt-40">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
-        <Eyebrow>Final scene</Eyebrow>
+        <Eyebrow>Next stop</Eyebrow>
         <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
           Let&apos;s build something people actually want to use.
         </h1>
-        <p className="prose-measure mt-5 text-lg leading-relaxed text-paper-dim">
-          I&apos;m open to UI/UX and product design internships, product-adjacent roles, and good conversations
-          about interfaces. If you&apos;ve read a case study and want the director&apos;s commentary, even better.
+        <p className="prose-measure mt-5 text-lg leading-relaxed text-ink-soft">
+          I&apos;m open to product, business analysis, and UX-adjacent roles — anywhere the job is turning
+          messy real-world needs into something clear on a screen. If you&apos;ve read a field note and want
+          to argue with it, even better.
         </p>
 
         <ul className="mt-12 grid gap-4 sm:grid-cols-2">
@@ -53,18 +54,18 @@ export default function ContactPage() {
               <a
                 href={c.href}
                 {...(c.href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}
-                className="group block h-full rounded-2xl border border-line bg-ink-2 p-6 transition-all hover:-translate-y-0.5 hover:border-gold"
+                className="group block h-full rounded-2xl border border-line bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-accent/60"
               >
-                <p className="eyebrow text-muted group-hover:text-gold">{c.label}</p>
-                <p className="mt-2 font-display text-lg font-semibold text-paper">{c.value}</p>
-                <p className="mt-2 text-sm text-paper-dim">{c.note}</p>
+                <p className="eyebrow text-muted group-hover:text-accent-deep">{c.label}</p>
+                <p className="mt-2 font-display text-lg font-semibold text-ink">{c.value}</p>
+                <p className="mt-2 text-sm text-ink-soft">{c.note}</p>
               </a>
             </li>
           ))}
         </ul>
 
         <div className="mt-12 flex flex-wrap gap-4">
-          <ButtonLink href={`mailto:${site.email}?subject=Let's talk design`} external>
+          <ButtonLink href={`mailto:${site.email}?subject=Let's talk`} external>
             Start the conversation
           </ButtonLink>
           <ButtonLink href={site.resumePath} variant="secondary" download>
