@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/*
+  Design tokens — "cinematic dark" system.
+  Ink (deep charcoal-navy) + warm paper + muted marquee gold, with a soft
+  rose used sparingly. High contrast, warm rather than techy.
+*/
+:root {
+  --ink: #0b0d12;
+  --ink-2: #12151d;
+  --ink-3: #1a1e29;
+  --paper: #ede8de;
+  --paper-dim: #c9c3b6;
+  --muted: #948f83;
+  --gold: #d6ab63;
+  --gold-bright: #e8c07a;
+  --rose: #dd9384;
+  --sage: #a9b791;
+  --blue: #8fa8c7;
+  --line: rgba(237, 232, 222, 0.12);
+  --line-strong: rgba(237, 232, 222, 0.22);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-paper: var(--paper);
+  --color-paper-dim: var(--paper-dim);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-rose: var(--rose);
+  --color-sage: var(--sage);
+  --color-blue: var(--blue);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fraunces);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* Accessible, visible focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+}
+
+/* Subtle film grain over the whole page */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* Soft spotlight washes used behind heroes */
+.spotlight {
+  background:
+    radial-gradient(52rem 30rem at 18% -8%, rgba(214, 171, 99, 0.1), transparent 62%),
+    radial-gradient(40rem 26rem at 92% 4%, rgba(221, 147, 132, 0.06), transparent 60%);
+}
+
+/* Scroll-reveal (driven by the Reveal component) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Marquee-style eyebrow label */
+.eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+/* Comfortable reading measure inside case studies */
+.prose-measure {
+  max-width: 42rem;
+}
+
+.prose-measure p + p {
+  margin-top: 1rem;
+}
