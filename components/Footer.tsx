@@ -7,12 +7,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="font-display text-lg font-semibold">Ebaad Akram</p>
-          <p className="mt-1 max-w-sm text-sm text-ink-soft">
-            Software engineering student learning interface design in public. Ontario, Canada.
-          </p>
-          <p className="mt-4 text-xs uppercase tracking-[0.18em] text-muted">
-            Designed and coded by me — this site is part of the evidence.
-          </p>
+          <p className="mt-1 max-w-sm text-sm text-ink-soft">Software Engineering student</p>
         </div>
         <nav aria-label="Footer">
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">

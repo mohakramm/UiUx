@@ -6,7 +6,7 @@ import { Eyebrow, Tag } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Field Notes",
   description:
-    "Short observations about design in the wild — boarding passes, skip buttons, sitcom cold opens, undo, and forms. How Ebaad Akram thinks about interfaces.",
+    "Short observations about design in the wild: boarding passes, skip buttons, sitcom cold opens, undo, and forms. How Ebaad Akram thinks about interfaces.",
 };
 
 export default function NotesPage() {
@@ -19,8 +19,8 @@ export default function NotesPage() {
         </h1>
         <p className="prose-measure mt-5 text-lg leading-relaxed text-ink-soft">
           I don&apos;t have a decade of design war stories, so here&apos;s something more honest: proof that I
-          pay attention. Short notes on interfaces — and one or two non-interfaces — that taught me
-          something about how good design behaves.
+          pay attention. These are short notes on interfaces, and a couple of things that aren&apos;t
+          interfaces, that taught me something about how good design behaves.
         </p>
 
         <div className="mt-14 space-y-10">

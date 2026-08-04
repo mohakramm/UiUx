@@ -12,7 +12,7 @@ const channels = [
     label: "Email",
     value: site.email,
     href: `mailto:${site.email}`,
-    note: "Best for anything real — I reply fast.",
+    note: "Best for anything real. I reply fast.",
   },
   {
     label: "LinkedIn",
@@ -24,13 +24,13 @@ const channels = [
     label: "GitHub",
     value: "github.com/mohakramm",
     href: site.github,
-    note: "Where the engineering half lives.",
+    note: "Where the engineering side lives.",
   },
   {
     label: "Dev portfolio",
     value: "eakram.dev",
     href: site.devPortfolio,
-    note: "The software engineering side of this same brain.",
+    note: "My software engineering projects, written up in detail.",
   },
 ];
 
@@ -43,9 +43,9 @@ export default function ContactPage() {
           Let&apos;s build something people actually want to use.
         </h1>
         <p className="prose-measure mt-5 text-lg leading-relaxed text-ink-soft">
-          I&apos;m open to product, business analysis, and UX-adjacent roles — anywhere the job is turning
-          messy real-world needs into something clear on a screen. If you&apos;ve read a field note and want
-          to argue with it, even better.
+          I&apos;m open to product, business analysis, and UX-adjacent roles. If the job involves turning
+          messy real-world needs into something clear on a screen, I&apos;m interested. And if you&apos;ve read
+          one of my field notes and want to argue with it, even better.
         </p>
 
         <ul className="mt-12 grid gap-4 sm:grid-cols-2">

@@ -34,7 +34,7 @@ function ItineraryScreen() {
       <div className="mt-2 space-y-1.5">
         {[
           { time: "6:30", what: "Sunset at Miradouro da Graça" },
-          { time: "8:00", what: "Dinner — A Cevicheria (booked)" },
+          { time: "8:00", what: "Dinner at A Cevicheria (booked)" },
         ].map((row) => (
           <div key={row.what} className="flex items-baseline gap-2 rounded-lg border border-line bg-card px-3 py-2">
             <p className="w-8 shrink-0 text-[0.6rem] font-semibold text-muted">{row.time}</p>
@@ -109,13 +109,13 @@ function PlansChangeScreen() {
         <br />
         is now <span className="text-accent-deep">5:25</span>.
       </p>
-      <p className="mt-1 text-[0.65rem] text-ink-soft">Caught it early — here&apos;s what it means for you.</p>
+      <p className="mt-1 text-[0.65rem] text-ink-soft">We caught it early. Here&apos;s what it means for you.</p>
 
       <div className="mt-4 space-y-1.5">
         {[
-          { ok: true, text: "Your connection still works — 1h 40m to spare" },
+          { ok: true, text: "Your connection still works, with 1h 40m to spare" },
           { ok: true, text: "Tonight's dinner reservation still fits" },
-          { ok: false, text: "Airport pickup rebooked to 5:25 — done for you" },
+          { ok: false, text: "Airport pickup rebooked for 5:25, already handled" },
         ].map((row) => (
           <div key={row.text} className="flex items-start gap-2 rounded-lg border border-line bg-card px-3 py-2">
             <span
@@ -141,18 +141,18 @@ function PlansChangeScreen() {
 
 const studies = [
   {
-    label: "Itinerary — a week, at a glance",
-    note: "Practicing: rendering a complex, multi-day plan as one calm, glanceable story — what's next gets the emphasis, changes get a quiet footnote instead of an alarm.",
+    label: "Itinerary: a week at a glance",
+    note: "Practicing: showing a complex, multi-day plan as one calm story. Whatever comes next gets the emphasis, and changes get a quiet footnote instead of an alarm.",
     screen: <ItineraryScreen />,
   },
   {
-    label: "Movie night — choosing, solved",
-    note: "Practicing: capturing preferences in three taps instead of a questionnaire, then proposing a small editable plan — because browsing is the villain of every good evening in.",
+    label: "Movie night: choosing, solved",
+    note: "Practicing: capturing preferences in three taps instead of a questionnaire, then proposing a small plan you can edit. Browsing is the villain of every good evening in.",
     screen: <MovieNightScreen />,
   },
   {
-    label: "Status — when plans change",
-    note: "Practicing: delivering disruptive news calmly — lead with what it means, list what's handled, and always leave a door open to a human.",
+    label: "Status: when plans change",
+    note: "Practicing: delivering bad news calmly. Lead with what it means, list what has already been handled, and always leave a door open to a human.",
     screen: <PlansChangeScreen />,
   },
 ];

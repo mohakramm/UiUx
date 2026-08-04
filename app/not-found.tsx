@@ -8,7 +8,7 @@ export default function NotFound() {
         This page isn&apos;t on the itinerary.
       </h1>
       <p className="mt-4 max-w-md text-ink-soft">
-        A wrong turn — it happens on the best trips. Everything worth seeing is still a click away.
+        A wrong turn. It happens on the best trips. Everything worth seeing is still a click away.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <ButtonLink href="/">Back to the start</ButtonLink>

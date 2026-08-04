@@ -6,7 +6,7 @@ import { ButtonLink, Eyebrow, SectionHeading, Tag } from "@/components/ui";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Ebaad Akram — software engineering student at Western University working at the overlap of analysis, engineering, and interface design.",
+    "Ebaad Akram is a software engineering student at Western University working at the overlap of analysis, engineering, and interface design.",
 };
 
 const analysisSkills = [
@@ -54,34 +54,39 @@ export default function AboutPage() {
             </h1>
             <div className="prose-measure mt-6 space-y-4 text-base leading-relaxed text-ink-soft">
               <p>
-                I&apos;m Ebaad — a software engineering student at Western University, and I&apos;ll tell you the
-                honest version of how I got here, because it&apos;s more interesting than the polished one.
+                I&apos;m Ebaad, a software engineering student at Western University. Here&apos;s the honest
+                version of how I got here.
               </p>
               <p>
-                I didn&apos;t grow up sketching app screens. I got into software because I like understanding
-                systems — how they work, where they break, what they cost. That took me through kernels and
-                REST APIs at school, then into internships where the work was analytical: cleaning ten
-                thousand rows of user data, mapping how people actually moved through a product, figuring
-                out which assumptions the data politely disagreed with.
+                I got into software because of my family. Growing up, I was the person everyone handed
+                their phone to. I taught my parents, aunts, uncles, and grandparents how to send photos,
+                join video calls, and undo whatever setting had mysteriously changed overnight. I liked
+                being the one who could help, but I also noticed something that stuck with me. These were
+                smart, capable people, and their own devices kept making them feel the opposite. Somewhere
+                in all those kitchen-table tech support sessions, I decided I wanted to understand how this
+                stuff works, and maybe help make it less frustrating. That&apos;s what took me to software
+                engineering.
               </p>
               <p>
-                Design entered sideways. At my software internship, the feature I&apos;m proudest of wasn&apos;t
-                impressive engineering — it was a version history panel whose entire job was emotional:
-                making people brave enough to edit their own resumes. Watching support tickets drop taught
-                me something no lecture had: the interface <em>is</em> the product, and the analyst&apos;s
-                question — <em>why do people do that?</em> — is also the designer&apos;s question.
+                School taught me the systems side: kernels, REST APIs, databases, embedded programming. My
+                internships taught me the other half. At one, I cleaned and analyzed over ten thousand rows
+                of user data and learned what people actually do, which is rarely what we assume. At
+                another, I built React features for a resume builder used by real people under real stress.
               </p>
               <p>
-                So that&apos;s what I am right now, honestly labelled: an engineer-analyst with real product
-                instincts, UX coursework, one shipped feature I can talk about for an hour, and a growing,
-                deliberate design practice — this site included. Not a decade of craft. A direction, chosen
-                on purpose, with evidence.
+                The feature I&apos;m proudest of from that internship wasn&apos;t a technical achievement. It
+                was a version history panel. Its whole job was to make people feel safe editing their own
+                resumes, and after it shipped, support tickets about lost edits dropped by about 40
+                percent. That project changed how I think about software. The interface is the product, and
+                the question I kept asking as an analyst, &quot;why do people do that?&quot;, turns out to be the
+                same question a designer asks.
               </p>
               <p>
-                The other thing you should know: I love sitcoms, romcoms, and television generally, and I
-                genuinely believe they&apos;re design education. Timing, context, knowing your audience,
-                knowing when a beat needs to land and when to cut away — that&apos;s interface work with
-                better lighting.
+                So that&apos;s where I am right now. I&apos;m not going to claim years of design experience,
+                because I don&apos;t have them. What I do have is an engineering degree in progress, real
+                analysis work, UX coursework, one shipped feature I can talk about for an hour, and a
+                genuine interest in doing more of this kind of work. This site is part of that effort, and
+                I built every page of it myself.
               </p>
             </div>
           </Reveal>
@@ -98,15 +103,14 @@ export default function AboutPage() {
                 />
               </div>
               <figcaption className="font-hand mt-3 text-center text-xl text-ink-soft">
-                somewhere between the spreadsheet and the screen
+                hi, that&apos;s me
               </figcaption>
             </figure>
             <div className="mt-6 rounded-2xl border border-line bg-card p-6 text-sm leading-relaxed text-ink-soft">
-              <p className="eyebrow text-accent-deep">Off duty</p>
-              <p className="mt-3">
-                Comfort rewatches, ensemble sitcoms with great timing, romcoms where the leads are competent
-                adults, and the occasional anime arc that goes harder than it needs to. Strong opinions
-                about bottle episodes, held loosely.
+              <p>
+                In my free time I love watching movies and TV shows. My favourite genre is comedy and I
+                love a good sitcom. I&apos;d have to say my favourite is How I Met Your Mother. Best show of
+                all time.
               </p>
             </div>
           </Reveal>
@@ -116,9 +120,8 @@ export default function AboutPage() {
         <section className="mt-20" aria-labelledby="skills-title">
           <Reveal>
             <SectionHeading
-              eyebrow="The toolkit"
               title="Three overlapping skill sets"
-              intro="The overlap is the point — I can sit in the requirements meeting, the design review, and the sprint planning without changing costumes."
+              intro="The overlap is the point. I can follow the requirements meeting, the design review, and the sprint planning conversation without needing a translator."
               id="skills-title"
             />
           </Reveal>
@@ -153,7 +156,7 @@ export default function AboutPage() {
                 ))}
               </ul>
               <p className="mt-4 text-xs leading-relaxed text-muted">
-                Relevant coursework: {coursework.join(" · ")} — B.E.Sc. Software Engineering, Western
+                Relevant coursework: {coursework.join(" · ")}. B.E.Sc. Software Engineering at Western
                 University, expected 2027.
               </p>
             </Reveal>
@@ -166,8 +169,8 @@ export default function AboutPage() {
             The rest is better in conversation.
           </h2>
           <p className="mx-auto mt-3 max-w-md text-sm text-ink-soft">
-            Happy to walk through anything here — the field notes, the interface studies, or the honest
-            version of any line on the resume.
+            Happy to talk through anything here, whether it&apos;s the field notes, the interface studies, or
+            the honest version of any line on my resume.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-4">
             <ButtonLink href={`mailto:${site.email}`} external>

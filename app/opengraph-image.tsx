@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
 
-export const alt = "Ebaad Akram — Product & Interface Design";
+export const alt = "Ebaad Akram's portfolio";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -31,7 +31,7 @@ export default function OpenGraphImage() {
             color: "#bd4527",
           }}
         >
-          Ebaad Akram · Product & Interface Design
+          Ebaad Akram
         </div>
         <div
           style={{

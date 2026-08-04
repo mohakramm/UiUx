@@ -22,11 +22,8 @@ export default function NavBar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-md">
       <nav aria-label="Main" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="group flex items-baseline gap-2">
+        <Link href="/" className="flex items-baseline">
           <span className="font-display text-lg font-semibold tracking-tight">Ebaad Akram</span>
-          <span className="hidden text-[0.7rem] uppercase tracking-[0.18em] text-muted transition-colors group-hover:text-accent-deep sm:inline">
-            Product & Design
-          </span>
         </Link>
 
         {/* Desktop nav */}

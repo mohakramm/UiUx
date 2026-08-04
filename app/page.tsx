@@ -9,17 +9,17 @@ const stops = [
   {
     stop: "Stop 01",
     title: "Systems",
-    body: "Software engineering at Western University: kernels, REST APIs, embedded systems, databases. I learned how things actually work — and how they actually break.",
+    body: "Software engineering at Western University: kernels, REST APIs, embedded systems, databases. I learned how things actually work, and how they break.",
   },
   {
     stop: "Stop 02",
-    title: "People & data",
-    body: "Internships on both sides of the product: analyzing 10,000+ rows of user behavior at a nonprofit, and building React features at a resume-builder startup. The questions I kept gravitating to were the analyst's: why do people do that?",
+    title: "People and data",
+    body: "Internships on both sides of the product. I analyzed over 10,000 rows of user behavior at a nonprofit, and I built React features at a resume builder startup. The question I kept coming back to was the analyst's question: why do people do that?",
   },
   {
     stop: "Stop 03",
     title: "Design",
-    body: "UX coursework, a shipped feature whose whole point was how it felt to use, and now this site. I won't pretend design was the lifelong plan — it's where the first two stops kept pointing.",
+    body: "UX coursework, a shipped feature whose whole point was how it felt to use, and now this site. I won't pretend design was the lifelong plan. It's just where the first two stops kept pointing.",
     here: true,
   },
 ];
@@ -27,19 +27,19 @@ const stops = [
 const principles = [
   {
     title: "Order things by the reader's moment",
-    body: "Information arranged by when someone needs it beats information arranged by who owns it. Boarding passes get this right; most dashboards don't.",
+    body: "Information arranged by when someone needs it beats information arranged by who owns it. Boarding passes get this right. Most dashboards don't.",
   },
   {
     title: "The unhappy path is the real design",
-    body: "Empty states, errors, delays, changes of plan. Anyone can design the demo; the product is what happens when things wobble.",
+    body: "Empty states, errors, delays, changes of plan. Anyone can design the happy path. The real product is what happens when things wobble.",
   },
   {
     title: "Trust changes behavior more than features do",
-    body: "People use products bravely when there's a guaranteed way back. I've watched a safety net cut support tickets by 40% — mostly without being used.",
+    body: "People use products bravely when they know there's a way back. I've watched a safety net cut support tickets by 40%, mostly without ever being used.",
   },
   {
     title: "Timing is a design material",
-    body: "Sitcoms taught me this before any course did: the same information lands or dies depending on when and how it arrives.",
+    body: "Sitcoms taught me this before any course did. The same information lands or dies depending on when and how it arrives.",
   },
   {
     title: "If it can't be built, it isn't designed yet",
@@ -67,10 +67,10 @@ export default function Home() {
           </Reveal>
           <Reveal delay={160}>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
-              Software engineering student at Western University. I&apos;ve spent my degree learning how
-              systems work and my internships learning how people actually use them — and the work I keep
-              choosing lives in between: mapping workflows, questioning requirements, and designing
-              interfaces that are clear, calm, and honest. This site is me practicing that craft in public.
+              I&apos;m a software engineering student at Western University. My degree taught me how systems
+              work, and my internships taught me how people actually use them. The work I enjoy most lives
+              in between: mapping workflows, questioning requirements, and designing interfaces that are
+              clear, calm, and honest. This site is me practicing that in public.
             </p>
           </Reveal>
           <Reveal delay={240}>
@@ -137,7 +137,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Interface studies"
               title="Small screens, practiced deliberately"
-              intro="Self-initiated concept studies, designed and built in code — no clients, no invented backstories. Each one is a rep for a pattern I care about: complex plans told simply, preferences captured lightly, and bad news delivered calmly."
+              intro="Self-initiated concept studies, designed and built in code. No clients and no made-up backstories. Each one practices a pattern I care about: complex plans told simply, preferences captured lightly, and bad news delivered calmly."
               id="explorations-title"
             />
           </Reveal>
@@ -157,7 +157,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Field notes"
                 title="Noticing is a skill. I practice it in writing."
-                intro="Short observations about design in the wild — boarding passes, skip buttons, sitcom cold opens. The fastest way to see how I think."
+                intro="Short observations about design in the wild: boarding passes, skip buttons, sitcom cold opens. The fastest way to see how I think."
                 id="notes-title"
               />
               <Link href="/notes" className="text-sm font-semibold text-accent-deep hover:text-accent">
@@ -194,7 +194,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="How I think"
               title="Six things I believe about good interfaces"
-              intro="Opinions, held with reasons. Ask me about any of them."
+              intro="Opinions I can defend. Ask me about any of them."
               id="principles-title"
             />
           </Reveal>
@@ -217,26 +217,26 @@ export default function Home() {
             <SectionHeading
               eyebrow="Previously"
               title="Where the instincts come from"
-              intro="The full version is on the resume — this is the shape of it."
+              intro="The full version is on the resume. This is the shape of it."
               id="exp-title"
             />
           </Reveal>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {[
               {
-                org: "Resume Inc. — Software Engineering Intern",
+                org: "Resume Inc. · Software Engineering Intern",
                 when: "Summer 2024 · Toronto",
-                what: "Built interactive UI for a resume builder in React, including the version history feature that cut related support tickets by 40%. My first taste of designing for how something feels, not just whether it works.",
+                what: "Built interactive UI for a resume builder in React, including the version history feature that cut related support tickets by 40%. It was my first taste of designing for how something feels, not just whether it works.",
               },
               {
-                org: "MNN Nexus — Data Analyst Intern",
+                org: "MNN Nexus · Data Analyst Intern",
                 when: "Summer 2025 · Mississauga",
-                what: "Cleaned and segmented 10,000+ rows of user data into behavioral groups used for targeted outreach. Analysis work, and quietly the most useful design training I've had: what people do versus what we assume.",
+                what: "Cleaned and segmented over 10,000 rows of user data into behavioral groups used for targeted outreach. It was analysis work, and quietly the most useful design training I've had: what people actually do versus what we assume.",
               },
               {
-                org: "Western Engineering Bots — Software Subteam Lead",
-                when: "2024 – present · London, ON",
-                what: "Lead an 8-person software team building a humanoid robot for national competition — systems integration plus the human work of keeping eight engineers pointed the same way.",
+                org: "Western Engineering Bots · Software Subteam Lead",
+                when: "2024 to present · London, ON",
+                what: "I lead an 8-person software team building a humanoid robot for a national competition. Half of the job is systems integration, and the other half is keeping eight engineers pointed the same way.",
               },
             ].map((e, i) => (
               <Reveal key={e.org} delay={i * 80} className="rounded-2xl border border-line bg-card p-6">
@@ -255,10 +255,10 @@ export default function Home() {
           <Reveal>
             <SectionHeading eyebrow="Off screen" title="Systems by training, stories by choice" id="about-teaser-title" />
             <p className="prose-measure mt-5 leading-relaxed text-ink-soft">
-              I&apos;ve always been drawn to how people behave — the decisions they make, the awkward moments
-              they avoid, the tiny interactions that change everything. It&apos;s why I love sitcoms and
-              romcoms, and it&apos;s why the design side of building software keeps pulling me in: timing,
-              context, and understanding people turn out to be the whole job.
+              I&apos;ve always been drawn to how people behave: the decisions they make, the awkward moments
+              they avoid, the small interactions that change everything. It&apos;s why I love sitcoms, and
+              it&apos;s why the design side of software keeps pulling me in. Timing, context, and
+              understanding people turn out to be most of the job.
             </p>
             <div className="mt-7">
               <ButtonLink href="/about" variant="secondary">
@@ -280,7 +280,7 @@ export default function Home() {
                 />
               </div>
               <figcaption className="font-hand mt-3 text-center text-xl text-ink-soft">
-                hi — that&apos;s me
+                hi, that&apos;s me
               </figcaption>
             </figure>
           </Reveal>
@@ -296,8 +296,8 @@ export default function Home() {
               Let&apos;s build something people actually want to use.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-ink-soft">
-              I&apos;m at my best where analysis, engineering, and design overlap — product roles, UX-adjacent
-              roles, and teams that value someone who can hold all three conversations.
+              I&apos;m at my best where analysis, engineering, and design overlap. That means product roles,
+              UX-adjacent roles, and teams that value someone who can hold all three conversations.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <ButtonLink href={`mailto:${site.email}`} external>

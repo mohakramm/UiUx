@@ -7,7 +7,7 @@ export const withBase = (path: string) => `${basePath}${path}`;
 
 export const site = {
   name: "Ebaad Akram",
-  role: "Product · Analysis · Interface Design",
+  role: "Software Engineering student",
   tagline: "I make complicated systems make sense.",
   location: "Ontario, Canada (Toronto / London)",
   email: "ebaadakram3@gmail.com",

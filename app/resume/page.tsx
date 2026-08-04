@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
-import { ButtonLink, Eyebrow } from "@/components/ui";
+import { ButtonLink } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "Ebaad Akram's resume — software engineering, data analysis, and interface design.",
+  description: "Ebaad Akram's resume: software engineering, data analysis, and interface design.",
 };
 
 export default function ResumePage() {
   return (
     <div className="pt-32 pb-24 sm:pt-40">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
-        <Eyebrow>One page, no filler</Eyebrow>
-        <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Resume</h1>
+        <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">Resume</h1>
         <p className="prose-measure mt-5 text-base leading-relaxed text-ink-soft">
-          Software engineering foundation, analyst instincts, design-leaning work: UX coursework, a shipped
-          product feature with a measurable outcome, and internship time on both the building and the
-          understanding sides of software.
+          A software engineering foundation with analyst instincts and growing design experience. It covers
+          my UX coursework, a shipped feature with a measurable outcome, and internships on both the
+          building side and the analysis side of software.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <ButtonLink href={site.resumePath} download>
@@ -34,7 +33,7 @@ export default function ResumePage() {
             aria-label="Embedded PDF of Ebaad Akram's resume"
           >
             <p className="p-8 text-center text-sm text-ink-soft">
-              Your browser can&apos;t display the PDF inline —{" "}
+              Your browser can&apos;t display the PDF here, but you can{" "}
               <a className="font-semibold text-accent-deep underline" href={site.resumePath}>
                 download it instead
               </a>

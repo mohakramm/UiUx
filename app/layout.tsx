@@ -28,15 +28,15 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Ebaad Akram — Product & Interface Design",
+    default: "Ebaad Akram · Portfolio",
     template: "%s · Ebaad Akram",
   },
   description:
-    "Software engineering student and analyst learning interface design in public. Field notes on design in the wild, small interface studies, and an honest account of the route so far.",
+    "Ebaad Akram is a software engineering student learning interface design in public. Field notes on design in the wild, small interface studies, and an honest account of the route so far.",
   openGraph: {
-    title: "Ebaad Akram — Product & Interface Design",
+    title: "Ebaad Akram · Portfolio",
     description:
-      "Systems by training, people by curiosity. Field notes, interface studies, and the route from engineering to design.",
+      "Systems by training, stories by choice. Field notes, interface studies, and the route from engineering to design.",
     url: site.url,
     siteName: "Ebaad Akram",
     locale: "en_CA",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ebaad Akram — Product & Interface Design",
+    title: "Ebaad Akram · Portfolio",
     description: "I make complicated systems make sense.",
   },
 };
